@@ -15,3 +15,4 @@ React, TypeScript, Vite, SCSS, React Hook Form, Zod, Highcharts, Vitest, React T
 Node.js, Express, TypeScript, MySQL (`mysql2`).
 
 
+Clone the repo > run npm i for both folders seprately > configure DB in api/.env > npm run dev
