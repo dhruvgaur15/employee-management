@@ -2,8 +2,7 @@
 CREATE DATABASE IF NOT EXISTS employee_db;
 USE employee_db;
 
-DROP TABLE IF EXISTS employees;
-CREATE TABLE employees (
+CREATE TABLE IF NOT EXISTS employees (
     emp_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     salary DECIMAL(10, 2) NOT NULL,
