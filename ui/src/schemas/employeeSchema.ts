@@ -18,6 +18,13 @@ export const schema = z
       message: "Departure date cannot be before joining date",
       path: ["departure_date"],
     },
+  )
+  .refine(
+    (data) => data.active || data.departure_date.trim().length > 0,
+    {
+      message: "Deprature date is required for inactive employees",
+      path: ["departure_date"]
+    }
   );
 
 export type FormValues = z.infer<typeof schema>;
