@@ -29,7 +29,7 @@ export function EmployeeTable({
   onDelete,
 }: EmployeeTableProps) {
   const arrow = (key: keyof Employee) =>
-    sortBy !== key ? " ↕" : sortOrder === "asc" ? " ↑" : " ↓";
+    key !== 'departure_date' && (sortBy !== key ? " ↕" : sortOrder === "asc" ? " ↑" : " ↓");
 
   return (
     <div className="table-wrap">
